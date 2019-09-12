@@ -16,24 +16,24 @@ Creates multi page website.
 ```
 src/
 |- app.js
-|  |-assets/
+|   |-assets/
 |   |-images/
 |- js/
-| |-main.js
-| |-pages/
-|   |-m(mobile)
-|     |-billing
-|     |-shipping
-|     |-index.html(packages)  
-|   |-d(desktop)
-|     |-billing
-|     |-index.html (packages and shipping form)
+|   |-main.js
+|-pages/
+|   |-m(mobile)/
+|      |-billing
+|      |-shipping
+|      |-index.html(packages)  
+|   |-d(desktop)/
+|      |-billing
+|      |-index.html (packages and shipping form)
 |-css/
-| |-exclusive/
-|   |-form.scss
-|   |-packages.scss
-|   |-(other page/component exclusive styles)
-| |-main.scss
+|   |-exclusive/
+|      |-form.scss
+|      |-packages.scss
+|      |-(other page/component exclusive styles)
+|   |-main.scss
 ```        
 
 ______________________________
@@ -53,29 +53,29 @@ Create single page (progressive) application.
 src/
 |-offer.json
 |-assets/
-|    |-images
-|    |-icons
+|   |-images/
+|   |-icons/
 |-components/
-|    // All folders contain index.js file
-|    |-footer/
-|    |-header/
-|    |-products/
+|   // All folders contain index.js file
+|   |-footer/
+|   |-header/
+|   |-products/
 |- routes/
-|    |-m(mobile)/
-|       // All folders contain index.js file  
-|       |-packages
-|       |-billing
-|       |-shipping
-|    - d(desktop)/
-|       // All folders contain index.js file  
-|       |-shipping
-|       |-billing
+|   |-m(mobile)/
+|      // All folders contain index.js file  
+|      |-packages
+|      |-billing
+|      |-shipping
+|   |-d(desktop)/
+|      // All folders contain index.js file  
+|      |-shipping
+|      |-billing
 |- style
-|    -exclusive/
-|       |-form.less
-|       |-packages.less
-|       |-(other page/component exclusive styles)
-|    |-main.less
+|   |-exclusive/
+|      |-form.less
+|      |-packages.less
+|      |-(other page/component exclusive styles)
+|   |-main.less
 ```
 
 ## Style:

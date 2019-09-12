@@ -1,18 +1,18 @@
-#System Infrastructure:
+# System Infrastructure:
 
 The reason for the two different templates, is because both they both have different use cases based on their builds for their respective integration setup.
 
-##BuyGoods:
+## BuyGoods:
 
-###Library:
+### Library:
 Webpack
 
 Unless integrated with react, won’t be able to use components. Maybe something to consider
 
-###On Build:
+### On Build:
 Creates multi page website.
 
-###Future Folder Structure:
+### Future Folder Structure:
 ```
 src/
 |- app.js
@@ -38,17 +38,17 @@ src/
 
 ______________________________
 
-##In House:
+## In House:
 
-###Library:
+### Library:
 Preact
 
 With Preact we can create a reusable component library, to help make maintenance easier
 
-###On Build:
+### On Build:
 Create single page (progressive) application.
 
-###Future Folder Structure:
+### Future Folder Structure:
 ```
 src/
 |-offer.json
@@ -78,15 +78,15 @@ src/
 |    |-main.less
 ```
 
-##Style:
+## Style:
 Uses Less CSS compiler to manage and handle page styles
 All routes of the design will be styled through all the css coded in the LESS files.
 
-##offer.js:
+## offer.js:
 This file will be used to handle content specific to each offer type. With dynamic rendering we can pass content through string compilation using curly braces. By following the json string path, we can easily change the look of the template. For example:
 
 
-###offer.js:
+### offer.js:
 ```
 {
   offer: [{
@@ -95,35 +95,35 @@ This file will be used to handle content specific to each offer type. With dynam
 }
 ```
 
-###example.css:
+### example.css:
 ```
 .sb .background{
     background: #ccc;
 }
 ```
 
-###index.html:
+### index.html:
 ```
 <body={ offer.sugarBalance } >
 ```
 
-###render build:
+### render build:
 ```
 <body class=“sb” >
 ```
 
-##Images:
+## Images:
 All images in the images folder will need their offer name tied to the image file. Example:
 
-###image:
+### image:
 ```
 sb-product-image.png
 ```
 
-###index.html:
+### index.html:
 ```
 <img src={ offer.sugarBalance + ‘-product-image.png’ }
 ```
 
 For routing on different devices, can work along side router function to change the template based on screen size.
-One solutuon: (https://stackoverflow.com/questions/47970343/how-to-block-a-react-route-based-on-device-dimensions)
+[***One solutuon***]: (https://stackoverflow.com/questions/47970343/how-to-block-a-react-route-based-on-device-dimensions)

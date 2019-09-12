@@ -77,6 +77,7 @@ src/
 |      |-(other page/component exclusive styles)
 |   |-main.less
 ```
+# File Setup
 
 ## Style:
 Uses Less CSS compiler to manage and handle page styles

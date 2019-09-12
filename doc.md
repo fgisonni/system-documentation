@@ -1,4 +1,4 @@
-# System Infrastructure:
+# Checkout System Infrastructure:
 
 The reason for the two different templates, is because both they both have different use cases based on their builds for their respective integration setup.
 
@@ -43,7 +43,7 @@ ______________________________
 ### Library:
 Preact
 
-With Preact we can create a reusable component library, to help make maintenance easier
+With Preact we can create a reusable component library, to help make maintenance easier. Create fast web app when site is built.
 
 ### On Build:
 Create single page (progressive) application.

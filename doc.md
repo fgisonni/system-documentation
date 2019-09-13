@@ -16,7 +16,7 @@ Creates multi page website.
 ```
 src/
 |- app.js
-|   |-assets/
+|-assets/
 |   |-images/
 |- js/
 |   |-main.js

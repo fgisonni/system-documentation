@@ -29,13 +29,12 @@ src/
 |      |-billing
 |      |-index.html (packages and shipping form)
 |-css/
-|   |-exclusive/
+|   |-exclusive/      This folder is for all styles exclusive to components and pages
 |      |-form.scss
 |      |-packages.scss
 |      |-(other page/component exclusive styles)
-|   |-main.scss
+|   |-main.scss     For all global styles and helper classes - all exclusive folder styles are imported into this folder
 ```        
-
 ______________________________
 
 ## In House:
@@ -71,11 +70,11 @@ src/
 |      |-shipping
 |      |-billing
 |- style
-|   |-exclusive/
+|   |-exclusive/      This folder is for all styles exclusive to components and pages
 |      |-form.less
 |      |-packages.less
 |      |-(other page/component exclusive styles)
-|   |-main.less
+|   |-main.less     For all global styles and helper classes - all exclusive folder styles are imported into this folder
 ```
 # File Setup
 
@@ -83,16 +82,50 @@ src/
 Uses Less CSS compiler to manage and handle page styles
 All routes of the design will be styled through all the css coded in the LESS files.
 
+### SASS
+```
+/*
+  Sugar Balance Naming & Colour Variables
+*/
+$sb: sb
+$sb-bg: #ccc;
+...
+```
+
+### LESS
+```
+/*
+  Sugar Balance Naming & Colour Variables
+*/
+@sb: sb
+@sb-bg: #ccc;
+...
+```
+
 ## offer.js:
 This file will be used to handle content specific to each offer type. With dynamic rendering we can pass content through string compilation using curly braces. By following the json string path, we can easily change the look of the template. For example:
 
 
-### offer.js:
+### offer.js - template example:
 ```
 {
   offer: [{
-    sugarBalance: ‘sb’
+    sugarBalance:[
+      sup: ‘sb’,
+      productName: 'Sugar Balance',
+      proceedButtonText: 'Procceed to Shipping',
+      shippingButtonText: 'Procceed to Billing',
+      billingButtonText: 'Pay Now',
+      onePackage: '69',
+      threePackage: '59',
+      sixPackage: '49',
+      threePackagePercentSavings: '70',
+      sixPackagePercentSavings: '50'
+
+    ]
   }]
+  ...
+  //Will consist same templating for different offers
 }
 ```
 
@@ -105,7 +138,7 @@ This file will be used to handle content specific to each offer type. With dynam
 
 ### index.html:
 ```
-<body={ offer.sugarBalance } >
+<body={ offer.sugarBalance.sup } >
 ```
 
 ### render build:
@@ -123,7 +156,7 @@ sb-product-image.png
 
 ### index.html:
 ```
-<img src={ offer.sugarBalance + ‘-product-image.png’ }
+<img src={ offer.sugarBalance.sup + ‘-product-image.png’ }
 ```
 
 For routing on different devices, can work along side router function to change the template based on screen size.

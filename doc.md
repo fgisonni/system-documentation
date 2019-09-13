@@ -113,7 +113,7 @@ This file will be used to handle content specific to each offer type. With dynam
 {
   offer: [{
     sugarBalance:[
-      sup: ‘sb’,
+      selector: ‘sb’,
       productName: 'Sugar Balance',
       proceedButtonText: 'Procceed to Shipping',
       shippingButtonText: 'Procceed to Billing',
@@ -140,7 +140,7 @@ This file will be used to handle content specific to each offer type. With dynam
 
 ### index.html:
 ```
-<body={ offer.sugarBalance.sup } >
+<body={ offer.sugarBalance.selector } >
 ```
 
 ### render build:
@@ -158,7 +158,7 @@ sb-product-image.png
 
 ### index.html:
 ```
-<img src={ offer.sugarBalance.sup + ‘-product-image.png’ }
+<img src={ offer.sugarBalance.selector + ‘-product-image.png’ }
 ```
 
 For routing on different devices, can work along side router function to change the template based on screen size.

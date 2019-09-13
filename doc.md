@@ -9,6 +9,47 @@ Webpack
 
 Unless integrated with react, won’t be able to use components. Maybe something to consider
 
+### Technology
+- @babel/core
+- @babel/plugin-syntax-dynamic-import
+- @babel/plugin-transform-runtime
+- @babel/preset-env
+- babel-core
+- babel-eslint
+- babel-loader
+- babel-minify-webpack-plugin
+- babel-plugin-transform-runtime
+- babel-polyfill
+- babel-preset-es2015
+- babel-preset-stage-0
+- brotli-webpack-plugin
+- clean-webpack-plugin
+- compression-webpack-plugin
+- css-loader
+- eslint
+- eslint-config-airbnb-base
+- eslint-plugin-import
+- file-loader
+- gzip-loader
+- html-loader
+- html-webpack-plugin
+- mini-css-extract-plugin
+- node-sass
+- optimize-css-assets-webpack-plugin
+- postcss-import
+- postcss-loader
+- postcss-nested
+- postcss-preset-env
+- postcss-reporter
+- sass-loader
+- style-loader
+- ts-loader
+- url-loader
+- webpack
+- webpack-cli
+- webpack-dev-server
+- webpack-merge
+
 ### On Build:
 Creates multi page website.
 
@@ -35,6 +76,16 @@ src/
 |      |-(other page/component exclusive styles)
 |   |-main.scss     For all global styles and helper classes - all exclusive folder styles are imported into this folder
 ```        
+
+### Redirect JS
+```
+const redirectURL = '/m'
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+   if (document.location.pathname.indexOf(redirectURL) == -1) {
+       document.location.href = redirectURL;
+   }
+}
+```
 ______________________________
 
 ## In House:
@@ -43,6 +94,19 @@ ______________________________
 Preact
 
 With Preact we can create a reusable component library, to help make maintenance easier. Create fast web app when site is built.
+
+### Technology
+- eslint
+- eslint-config-synacor
+- jest
+- jest-preset-preact
+- less
+- less-loader
+- per-env
+- preact-cli
+- preact-cli-plugin-netlify
+- preact-render-spy
+- webpack
 
 ### On Build:
 Create single page (progressive) application.

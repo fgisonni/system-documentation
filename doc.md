@@ -140,7 +140,7 @@ This file will be used to handle content specific to each offer type. With dynam
 
 ### index.html:
 ```
-<body={ offer.sugarBalance.selector } >
+<body className={ offer.sugarBalance.selector } >
 ```
 
 ### render build:

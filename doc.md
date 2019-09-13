@@ -102,6 +102,8 @@ $sb-bg: #ccc;
 ...
 ```
 
+***Mixins will be added upon development***
+
 ## offer.js:
 This file will be used to handle content specific to each offer type. With dynamic rendering we can pass content through string compilation using curly braces. By following the json string path, we can easily change the look of the template. For example:
 
